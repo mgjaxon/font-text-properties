@@ -23,15 +23,15 @@
     --dk-gray: #222;
 
     /* Font Stacks */
-    font-family: 'Lato', sans-serif;
-	font-family: 'Seymour One', sans-serif;
+    --body-fonts: Arial, Verdana, sans-serif;
+	--heading-fonts: 'Seymour One', Impact, sans-serif;
 }
 
 body{
-	/* set the font family to Lato, Arial, sans-serif (--body-fonts) */
-	/* Set the line height to 1.5 */
-	/* set the font size to 1.1rem	*/
-	/* set the font color to #222 (--dk-gray) */
+	font-family: var(--body-fonts);
+	line-height: 1.5;
+	font-size: 1.1rem;
+	font-color: var(--dk-gray);
 	margin: 0;
 	padding: 0;
 }
@@ -44,9 +44,9 @@ header{
 }
 
 h1, h2, h3{
-	/* center align the text */
-	/* use a web font here (instructions on page) */
-	/* make the heading text all small caps style */
+	text-align: center;
+	font-family: var(--heading-fonts);
+	font-variant: small-caps;
 }
 
 h2{
@@ -58,7 +58,7 @@ h2{
 h3{
 	margin: 0;
 	padding: 4px;
-	/* add an underline like the one on the h2s to the h3s, but make it solid and mint color */
+	text-decoration: solid underline var(--mint) 2px;
 }
 
 nav{
@@ -72,7 +72,6 @@ nav ul{
 }
 
 nav a{
-	/* make these display as block level elements */
 	display: block;
 	margin: 1rem auto;
 	padding: 1rem;
